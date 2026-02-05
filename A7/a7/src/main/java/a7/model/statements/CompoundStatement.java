@@ -25,4 +25,7 @@ implements IStatement
 
     @Override
     public String ToString() { return first.ToString() + ";\n" + second.ToString(); }
+
+    @Override
+    public String toString() { return ToString(); }
 }

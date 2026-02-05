@@ -59,4 +59,7 @@ implements IStatement
 
     @Override
     public String ToString() { return "read_file(" + expression.ToString() + ", " + varname + ")"; }
+
+    @Override
+    public String toString() { return ToString(); }
 }

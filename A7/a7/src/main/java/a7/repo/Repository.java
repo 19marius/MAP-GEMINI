@@ -13,12 +13,14 @@ import a7.model.ProgramState;
 public class Repository implements IRepository
 {
     private String log_path;
+    private final String desc;
     private final IList<ProgramState> programs;
 
-    public Repository(ProgramState program, String log_path)
+    public Repository(ProgramState program, String log_path, String desc)
     {
         this.programs = new List<>();
         this.log_path = log_path;
+        this.desc = desc;
 
         programs.Append(program);
     }
@@ -59,4 +61,7 @@ public class Repository implements IRepository
         }
         catch (IOException ex) { throw new LoggingException(log_path); }
     }
+
+    @Override
+    public String Description() { return desc; }
 }

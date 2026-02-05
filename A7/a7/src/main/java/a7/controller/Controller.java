@@ -16,6 +16,7 @@ import a7.model.values.RefValue;
 import a7.model.types.RefType;
 import a7.model.values.IValue;
 import a7.model.ProgramState;
+import a7.view.CommandMenu;
 
 public final class Controller 
 {
@@ -35,6 +36,10 @@ public final class Controller
 
     public boolean ToggleGC() { return (gc = !gc); }
 
+    public void InitializeExecutor() { if (executor == null || executor.isShutdown()) executor = Executors.newFixedThreadPool(2); }
+
+    public void ShutdownExecutor() { if (executor != null) executor.shutdownNow(); }
+
     public void ExecuteAll() throws Exception
     {
         executor = Executors.newFixedThreadPool(2);
@@ -52,7 +57,7 @@ public final class Controller
         repo.SetPrograms(programs);
     }
     
-    private void ParallelSingleStep(IList<ProgramState> programs) throws Exception
+    public void ParallelSingleStep(IList<ProgramState> programs) throws Exception
     {
         if (log) programs.ForEach(p -> repo.LogExecution(p));
         java.util.List<Callable<ProgramState>> call_list = programs.Select(p -> (Callable<ProgramState>)(() -> p.ExecuteSingleStep()))
@@ -117,5 +122,18 @@ public final class Controller
             .ForEach(s -> refs.Append(s));
 
         return refs;
+    }
+
+    @Override
+    public String toString()
+    {
+        if (Repository() == null || 
+            Repository().GetPrograms() == null || 
+            Repository().GetPrograms().Length() == 0 ||
+            Repository().GetPrograms().First().original() == null) 
+            
+            return super.toString();
+
+        return Repository().Description() + "\n" + CommandMenu.BARRIER + "\n" + Repository().GetPrograms().First().original().ToString() + "\n" + CommandMenu.BARRIER + "\n";
     }
 }

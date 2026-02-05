@@ -37,7 +37,7 @@ public final class ProgramTemplates
             new Dictionary<>()
         );
 
-        Repository repo = new Repository(program, log_path);
+        Repository repo = new Repository(program, log_path, "Simple assignment template");
         Controller ctrl = new Controller(repo);
 
         ctrl.ToggleLogFlag();
@@ -83,7 +83,7 @@ public final class ProgramTemplates
             new Dictionary<>()
         );
         
-        Repository repo = new Repository(program, log_path);
+        Repository repo = new Repository(program, log_path, "Arithmetic expressions template");
         Controller ctrl = new Controller(repo);
         
         ctrl.ToggleLogFlag();
@@ -126,7 +126,7 @@ public final class ProgramTemplates
             new Dictionary<>()
         );
 
-        Repository repo = new Repository(program, log_path);
+        Repository repo = new Repository(program, log_path, "Conditional statement template");
         Controller ctrl = new Controller(repo);
 
         ctrl.ToggleLogFlag();
@@ -181,7 +181,7 @@ public final class ProgramTemplates
             new Dictionary<>()
         );
 
-		Repository repo = new Repository(program, log_path);
+		Repository repo = new Repository(program, log_path, "File read template");
         Controller ctrl = new Controller(repo);
 
         ctrl.ToggleLogFlag();
@@ -221,7 +221,7 @@ public final class ProgramTemplates
             new Dictionary<>()
         );
 
-		Repository repo = new Repository(program, log_path);
+		Repository repo = new Repository(program, log_path, "Relational expression template");
         Controller ctrl = new Controller(repo);
 
         ctrl.ToggleLogFlag();
@@ -263,7 +263,7 @@ public final class ProgramTemplates
             new Dictionary<>()
         );
 
-        Repository repo = new Repository(program, log_path);
+        Repository repo = new Repository(program, log_path, "Heap allocation template");
         Controller ctrl = new Controller(repo);
 
         ctrl.ToggleLogFlag();
@@ -312,7 +312,7 @@ public final class ProgramTemplates
             new Dictionary<>()
         );
         
-        Repository repo = new Repository(program, log_path);
+        Repository repo = new Repository(program, log_path, "Dereference template");
         Controller ctrl = new Controller(repo);
 
         ctrl.ToggleLogFlag();
@@ -358,7 +358,7 @@ public final class ProgramTemplates
             new Dictionary<>()
         );
 
-        Repository repo = new Repository(program, log_path);
+        Repository repo = new Repository(program, log_path, "Reference assignment template");
         Controller ctrl = new Controller(repo);
 
         ctrl.ToggleLogFlag();
@@ -404,7 +404,7 @@ public final class ProgramTemplates
             new Dictionary<>()
         );
 
-        Repository repo = new Repository(program, log_path);
+        Repository repo = new Repository(program, log_path, "GC template");
         Controller ctrl = new Controller(repo);
 
         ctrl.ToggleLogFlag();
@@ -454,7 +454,7 @@ public final class ProgramTemplates
             new Dictionary<>()
         );
 
-        Repository repo = new Repository(program, log_path);
+        Repository repo = new Repository(program, log_path, "While statement template");
         Controller ctrl = new Controller(repo);
 
         ctrl.ToggleLogFlag();
@@ -515,7 +515,7 @@ public final class ProgramTemplates
             new Dictionary<>()
         );
 
-        Repository repo = new Repository(program, log_path);
+        Repository repo = new Repository(program, log_path, "Fork template");
         Controller ctrl = new Controller(repo);
 
         ctrl.ToggleLogFlag();

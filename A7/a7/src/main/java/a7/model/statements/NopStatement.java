@@ -14,4 +14,7 @@ public class NopStatement implements IStatement
 
     @Override
     public String ToString() { return "nop"; }
+
+    @Override
+    public String toString() { return ToString(); }
 }

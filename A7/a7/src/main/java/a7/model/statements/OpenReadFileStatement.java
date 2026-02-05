@@ -41,4 +41,7 @@ public record OpenReadFileStatement(IExpression expression) implements IStatemen
 
     @Override
     public String ToString() { return "open_read_file(" + expression.ToString() + ")"; }
+
+    @Override
+    public String toString() { return ToString(); }
 }

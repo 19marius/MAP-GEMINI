@@ -41,4 +41,7 @@ implements IStatement
 
     @Override
     public String ToString() { return "while (" + condition.ToString() + ")\n{\n  " + consequent.ToString().replace("\n", "\n  ") + ";\n}"; }
+
+    @Override
+    public String toString() { return ToString(); }
 }

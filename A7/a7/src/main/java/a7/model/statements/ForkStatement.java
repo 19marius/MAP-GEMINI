@@ -45,4 +45,7 @@ public record ForkStatement(IStatement statement) implements IStatement
                 (multi_line ? "\n" : "") +
                ")";
     }
+
+    @Override
+    public String toString() { return ToString(); }
 }

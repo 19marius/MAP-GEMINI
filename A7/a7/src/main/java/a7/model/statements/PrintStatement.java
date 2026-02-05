@@ -23,4 +23,7 @@ public record PrintStatement(IExpression expression) implements IStatement
 
     @Override
     public String ToString() { return "print(" + expression.ToString() + ")"; }
+
+    @Override
+    public String toString() { return ToString(); }
 }

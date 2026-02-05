@@ -28,4 +28,7 @@ implements IStatement
 
     @Override
     public String ToString() { return type.ToString() + " " + varname; }
+
+    @Override
+    public String toString() { return ToString(); }
 }

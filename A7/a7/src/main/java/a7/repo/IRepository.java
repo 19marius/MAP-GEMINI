@@ -5,6 +5,8 @@ import a7.model.ProgramState;
 
 public interface IRepository 
 {   
+    public String Description();
+
     public IList<ProgramState> GetPrograms();
     
     public void SetPrograms(IList<ProgramState> replacement);

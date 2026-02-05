@@ -43,4 +43,7 @@ implements IStatement
 
     @Override
     public String ToString() { return "if (" + condition.ToString() + ")\n{\n  " + consequent.ToString().replace("\n", "\n  ") + ";\n}\nelse\n{\n  " + alternative.ToString().replace("\n", "\n  ") + ";\n}"; }
+
+    @Override
+    public String toString() { return ToString(); }
 }

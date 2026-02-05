@@ -39,4 +39,7 @@ implements IStatement
 
     @Override
     public String ToString() { return "new(" + varname + ", " + expression.ToString() + ")"; }
+
+    @Override
+    public String toString() { return ToString(); }
 }

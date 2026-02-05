@@ -54,7 +54,7 @@ public class ProgramState
     public ProgramState ExecuteSingleStep() throws Exception
     {
         ProgramState result;
-        try { System.out.println(execution().Peek().getClass().getSimpleName()); result = execution().Pop().Execute(this); }
+        try { result = execution().Pop().Execute(this); }
         catch (Exception ex)
         {
             Reset();

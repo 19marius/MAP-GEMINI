@@ -37,4 +37,7 @@ implements IStatement
 
     @Override
     public String ToString() { return varname + " = " + expression.ToString(); }
+
+    @Override
+    public String toString() { return ToString(); }
 }

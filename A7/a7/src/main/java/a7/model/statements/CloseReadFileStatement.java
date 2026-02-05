@@ -40,4 +40,7 @@ public record CloseReadFileStatement(IExpression expression) implements IStateme
 
     @Override
     public String ToString() { return "close_read_file(" + expression.ToString() + ")"; }
+
+    @Override
+    public String toString() { return ToString(); }
 }
